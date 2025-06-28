@@ -1,0 +1,62 @@
+[
+  {
+    "id": "product-recommendation-system",
+    "name": "Product Recommendation System",
+    "type": "Full Stack Application",
+    "image": "https://placehold.co/600x400/2c3034/FFFFFF?text=Product+Recommendation",
+    "details": {
+      "techStack": ["React", "Tailwind CSS", "Node.js", "Express", "MongoDB", "JWT", "Firebase"],
+      "description": "A personalized product recommendation platform where users can submit queries, receive suggestions, and interact with other users' recommendations. Built with authentication, private routes, and dynamic UI.",
+      "liveLink": "https://product-recommendation-client.vercel.app/",
+      "githubLink": "https://github.com/Ratul8863/Product-Recommendations-client",
+      "challenges": [
+        "Implementing secure JWT authentication with Firebase login.",
+        "Designing a dynamic recommendation feed system and protected routes."
+      ],
+      "improvements": [
+        "Add ML-powered recommendation logic.",
+        "Introduce search and filtering for better UX."
+      ]
+    }
+  },
+  {
+    "id": "hobby-hub",
+    "name": "HobbyHub - Hobby Group Organizer",
+    "type": "Web Application",
+    "image": "https://placehold.co/600x400/2c3034/FFFFFF?text=HobbyHub",
+    "details": {
+      "techStack": ["React", "Tailwind CSS", "Firebase Auth", "Node.js", "MongoDB", "Recharts"],
+      "description": "A local hobby group management platform that lets users create, join, and manage groups. Includes a dashboard, charts, role-based features, and public group listings.",
+      "liveLink": "https://hobyhub-by-ratul.web.app/",
+      "githubLink": "https://github.com/Ratul8863/Hoby-hub-client",
+      "challenges": [
+        "Designing a clean dashboard with Recharts analytics.",
+        "Implementing sorting/filtering logic for group discovery."
+      ],
+      "improvements": [
+        "Add messaging between group members.",
+        "Implement group event scheduling with reminders."
+      ]
+    }
+  },
+  {
+    "id": "app-store",
+    "name": "AppStore - App Explorer",
+    "type": "Frontend Project",
+    "image": "https://placehold.co/600x400/2c3034/FFFFFF?text=AppStore",
+    "details": {
+      "techStack": ["React", "Tailwind CSS", "React Router", "Firebase"],
+      "description": "A modern app discovery platform simulating an App Store experience with categorized apps, user authentication, and a stylish UI/UX.",
+      "liveLink": "https://appstore-by-ratul.web.app/",
+      "githubLink": "https://github.com/Ratul8863/App-Store-a9",
+      "challenges": [
+        "Maintaining responsive UI across all devices.",
+        "Creating a seamless app detail routing system."
+      ],
+      "improvements": [
+        "Add rating/review functionality.",
+        "Enable backend integration for app submission."
+      ]
+    }
+  }
+]

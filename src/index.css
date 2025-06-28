@@ -1,0 +1,53 @@
+@import "tailwindcss";
+@plugin "daisyui";
+/* 
+@tailwind base;
+@tailwind components; */
+@tailwind utilities;
+body {
+  @apply bg-[#212529] text-white;
+  }
+  /* Swiper Customizations */
+
+/* Style for the pagination dots */
+.swiper-pagination-bullet {
+  background-color: #6b7280; /* Tailwind gray-600 */
+  opacity: 1; /* Ensure non-active bullets are visible */
+  width: 10px; /* Adjust size */
+  height: 10px; /* Adjust size */
+}
+
+/* Style for the active pagination dot */
+.swiper-pagination-bullet-active {
+  background-color: #34d399; /* Tailwind green-400 */
+  width: 12px; /* Slightly larger for active */
+  height: 12px;
+}
+
+/* Position for the pagination dots container */
+.swiper-pagination {
+  bottom: 0 !important; /* Pushes it to the very bottom of the Swiper container */
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  padding-bottom: 2rem; /* Give some space below the dots */
+}
+
+/* Hide Swiper's default navigation arrows if using custom ones */
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  display: none !important;
+}
+
+/* Style for custom navigation buttons (if needed to match theme) */
+/* These styles are mainly handled inline in JS, but can be overridden here */
+.swiper-button-prev-custom,
+.swiper-button-next-custom {
+  /* Inherits styles from JS. Can add more specific overrides here */
+}
+
+/* Ensure the custom buttons are clickable even though their parent has pointer-events-none */
+.swiper-button-prev-custom,
+.swiper-button-next-custom {
+    pointer-events: auto; /* Override parent's pointer-events-none */
+}
