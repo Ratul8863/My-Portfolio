@@ -1,55 +1,53 @@
 import React from 'react';
-import { AcademicCapIcon, BriefcaseIcon } from '@heroicons/react/24/outline'; // Icons for education and work
+import { AcademicCapIcon, BriefcaseIcon } from '@heroicons/react/24/outline';
 
 const EducationWorkSection = () => {
-  // Define your educational background data
   const education = [
     {
-      institution: 'University of XYZ', // Replace with your university name
-      degree: 'Bachelor of Science in Computer Science', // Replace with your degree
-      years: '2020 - 2024', // Replace with your years
+      institution: 'Metropolitan University, Sylhet',
+      degree: 'B.Sc. in Computer Science & Engineering (CSE)',
+      years: 'Jul\'2023 - Present',
     },
     {
-      institution: 'ABC College', // Replace with your college name
-      degree: 'Higher Secondary Certificate (HSC)', // Replace with your certificate
-      years: '2018 - 2020', // Replace with your years
+      institution: 'Sunamganj Govt. College',
+      degree: 'Higher Secondary Certificate (HSC) – Science',
+      years: '2020 - 2022',
     },
-    // You can add more educational entries if needed
-    // {
-    //   institution: 'Another Institute',
-    //   degree: 'Another Degree',
-    //   years: 'YYYY - YYYY',
-    // },
+    {
+      institution: 'Sunamganj Govt. Jubilee High School',
+      degree: 'Secondary School Certificate (SSC) – Science',
+      years: '2012 - 2020',
+    },
   ];
 
-  // Since you mentioned you don't have experience, this array will be empty.
-  // If you add experience later, populate this.
-  const experience = [];
+  const experience = []; // No current experience yet
 
   return (
-    <section className="bg-[#212529] text-white py-16 lg:py-24 relative overflow-hidden">
-      {/* Background Gradients/Shapes - consistent with other sections */}
+    <section id="education" className="bg-[#212529] text-white py-12 lg:py-12 relative overflow-hidden">
+      {/* Background gradients */}
       <div className="absolute inset-0">
         <div className="absolute top-1/4 left-1/4 w-48 h-48 bg-gradient-to-br from-green-400 to-teal-500 rounded-full opacity-10 blur-2xl"></div>
         <div className="absolute bottom-1/4 right-1/4 w-48 h-48 bg-gradient-to-br from-purple-400 to-teal-400 rounded-full opacity-10 blur-2xl"></div>
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
-        {/* Top Section: Title and Subtitle */}
+        {/* Title */}
         <div className="text-center mb-12 lg:mb-20">
           <p className="text-green-400 text-lg mb-2 flex items-center justify-center">
             <span className="w-2 h-2 bg-green-400 rounded-full mr-2"></span>
             Education & Work
           </p>
           <h2 className="text-4xl lg:text-5xl font-bold leading-tight">
-            Foundation and growth: my <span className="bg-clip-text text-transparent bg-gradient-to-r from-green-400 to-lime-400">education & work</span>
+            Foundation and growth: my{' '}
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-green-400 to-lime-400">
+              education & work
+            </span>
           </h2>
         </div>
 
-        {/* Education and Work Experience Cards Grid */}
+        {/* Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-
-          {/* Education Card */}
+          {/* Education */}
           <div className="bg-[#2c3034] p-8 rounded-lg shadow-lg relative overflow-hidden">
             <div className="flex items-center space-x-4 mb-8">
               <div className="bg-gradient-to-br from-green-400 to-teal-500 p-3 rounded-md">
@@ -59,7 +57,10 @@ const EducationWorkSection = () => {
             </div>
             <div className="space-y-6">
               {education.map((item, index) => (
-                <div key={index} className="flex justify-between items-center pb-4 border-b border-gray-700 last:border-b-0">
+                <div
+                  key={index}
+                  className="flex justify-between items-center pb-4 border-b border-gray-700 last:border-b-0"
+                >
                   <div>
                     <p className="text-lg font-semibold text-white">{item.institution}</p>
                     <p className="text-gray-400 text-sm">{item.degree}</p>
@@ -72,18 +73,21 @@ const EducationWorkSection = () => {
             </div>
           </div>
 
-          {/* Work Experience Card (Conditionally Rendered) */}
-          {experience.length > 0 && ( // Only render if there's experience
+          {/* Work Experience */}
+          {experience.length > 0 ? (
             <div className="bg-[#2c3034] p-8 rounded-lg shadow-lg relative overflow-hidden">
               <div className="flex items-center space-x-4 mb-8">
                 <div className="bg-gradient-to-br from-green-400 to-teal-500 p-3 rounded-md">
                   <BriefcaseIcon className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-2xl font-semibold">Work experience</h3>
+                <h3 className="text-2xl font-semibold">Work Experience</h3>
               </div>
               <div className="space-y-6">
                 {experience.map((item, index) => (
-                  <div key={index} className="flex justify-between items-center pb-4 border-b border-gray-700 last:border-b-0">
+                  <div
+                    key={index}
+                    className="flex justify-between items-center pb-4 border-b border-gray-700 last:border-b-0"
+                  >
                     <div>
                       <p className="text-lg font-semibold text-white">{item.company}</p>
                       <p className="text-gray-400 text-sm">{item.position}</p>
@@ -95,17 +99,11 @@ const EducationWorkSection = () => {
                 ))}
               </div>
             </div>
+          ) : (
+            <div className="flex items-center justify-center p-8 text-gray-400 text-lg bg-[#2c3034] rounded-lg shadow-lg">
+              <p>No professional experience to display yet. I'm excited to begin soon!</p>
+            </div>
           )}
-
-          {/* If no experience, you might want to show a message or just leave the space empty,
-              or remove the grid if only one card is present always on desktop.
-              For now, the grid will adapt, and if no experience, it will just be the education card. */}
-          {experience.length === 0 && (
-              <div className="flex items-center justify-center p-8 text-gray-400 text-lg">
-                <p>No professional experience to display yet. Looking forward to gaining some!</p>
-              </div>
-          )}
-
         </div>
       </div>
     </section>

@@ -97,7 +97,7 @@ const ToolsSection = () => {
   ];
 
   return (
-    <section className="bg-[#212529] text-white py-16 lg:py-24 relative overflow-hidden">
+    <section className="bg-[#212529] text-white  relative overflow-hidden">
       {/* Background Gradients/Shapes */}
       <div className="absolute inset-0">
         <div className="absolute top-1/4 right-1/4 w-48 h-48 bg-gradient-to-br from-green-400 to-teal-500 rounded-full opacity-10 blur-2xl"></div>
@@ -109,7 +109,7 @@ const ToolsSection = () => {
         <div className="text-center mb-12 lg:mb-20">
           <p className="text-green-400 text-lg mb-2 flex items-center justify-center">
             <span className="w-2 h-2 bg-green-400 rounded-full mr-2"></span>
-            My Tools
+           My Skills
           </p>
           <h2 className="text-4xl lg:text-5xl font-bold leading-tight">
             Design, develop, deliver: my <span className="bg-clip-text text-transparent bg-gradient-to-r from-green-400 to-lime-400">essential gear</span>

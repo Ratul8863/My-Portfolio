@@ -47,7 +47,7 @@ const specialties = [
 
 const SpecializationSection = () => {
   return (
-    <section className="py-16 sm:py-20 relative overflow-visible  font-inter ">
+    <section className=" relative overflow-visible  font-inter ">
       {/* Background blobs */}
       <div className="absolute inset-0 z-0 opacity-20 pointer-events-none">
         <div className="absolute inset-0 " />

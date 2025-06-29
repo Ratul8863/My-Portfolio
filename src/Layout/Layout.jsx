@@ -26,7 +26,7 @@ function Layout() {
       </main>
 
       {/* Footer - typically spans the full width */}
-      <Footer />
+   
     </div>
   );
 }

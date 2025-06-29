@@ -1,6 +1,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { UserIcon, TrophyIcon, LightBulbIcon } from '@heroicons/react/24/solid';
+
+import { UserIcon, TrophyIcon, ChatBubbleLeftRightIcon, LightBulbIcon } from '@heroicons/react/24/solid';
+import aboutphoto from "../../assets/About.jpg"
+
 
 const AboutSection = () => {
   return (
@@ -38,25 +41,31 @@ const AboutSection = () => {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <p className="text-gray-300 text-lg leading-relaxed mb-6">
-              I’m <span className="text-white font-semibold">Ratul Saha Roy</span>, a full-stack developer and active debater based in Bangladesh.
-              I enjoy building web applications that are both functional and beautiful. Outside of coding, you’ll find me expressing ideas through debate and working with teams to bring impactful visions to life.
-            </p>
+           <p className="text-gray-300 text-lg leading-relaxed mb-6">
+  I’m <span className="text-white font-semibold">Ratul Saha Roy</span>, a full-stack developer and passionate competitive programmer based in Bangladesh.  
+  I enjoy solving complex problems with C++ on Codeforces and building beautiful, efficient web applications using the MERN stack.  
+  Outside of coding, I’m involved in debating and public speaking — currently serving as Assistant Public Relations Secretary of the Metropolitan University Debating Society.  
+  I believe strong communication and technical skills go hand in hand.
+</p>
 
             <ul className="space-y-4">
-              <li className="flex items-center space-x-3">
-                <UserIcon className="w-6 h-6 text-green-400" />
-                <span>Passionate Full-Stack Developer</span>
-              </li>
-              <li className="flex items-center space-x-3">
-                <TrophyIcon className="w-6 h-6 text-green-400" />
-                <span>Experienced Debater & Public Speaker</span>
-              </li>
-              <li className="flex items-center space-x-3">
-                <LightBulbIcon className="w-6 h-6 text-green-400" />
-                <span>Lifelong Learner in AI & Machine Learning</span>
-              </li>
-            </ul>
+  <li className="flex items-center space-x-3">
+    <UserIcon className="w-6 h-6 text-green-400" />
+    <span>Passionate Full-Stack Developer (MERN)</span>
+  </li>
+  <li className="flex items-center space-x-3">
+    <TrophyIcon className="w-6 h-6 text-green-400" />
+    <span>Competitive Programmer (C++ @ Codeforces)</span>
+  </li>
+  <li className="flex items-center space-x-3">
+    <ChatBubbleLeftRightIcon className="w-6 h-6 text-green-400" />
+    <span> Debater & Public Speaker</span>
+  </li>
+  <li className="flex items-center space-x-3">
+    <LightBulbIcon className="w-6 h-6 text-green-400" />
+    <span>Actively Learning AI & Machine Learning</span>
+  </li>
+</ul>
 
             <div className="mt-8">
               <a
@@ -78,7 +87,7 @@ const AboutSection = () => {
           >
             <div className="w-64 h-64 rounded-xl overflow-hidden border-4 border-green-400 shadow-xl">
               <img
-                src="https://placehold.co/300x300/2c3034/FFFFFF?text=Ratul"
+                src={aboutphoto}
                 alt="Ratul Saha Roy"
                 className="object-cover w-full h-full"
               />

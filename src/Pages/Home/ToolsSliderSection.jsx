@@ -26,7 +26,7 @@ const tools = [
 
 const ToolsSliderSection = () => {
   return (
-    <section className="  overflow-hidden">
+    <section className="pt-16  overflow-hidden">
       
 
       <Marquee speed={50} gradient={false} pauseOnHover={true}>
