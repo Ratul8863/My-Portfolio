@@ -30,6 +30,7 @@
     "react-router-dom": "^7.6.3",
     "react-scroll": "^1.9.3",
     "react-simple-typewriter": "^5.0.1",
+    "sweetalert2": "^11.22.2",
     "swiper": "^11.2.9",
     "tailwindcss": "^4.1.11"
   },

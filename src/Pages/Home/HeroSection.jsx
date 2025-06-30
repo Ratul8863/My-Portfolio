@@ -4,8 +4,10 @@ import { motion } from 'framer-motion';
 import { Typewriter } from 'react-simple-typewriter';
 import { FaGithub, FaLinkedin, FaTwitter, FaFacebook } from 'react-icons/fa'; // Social Icons
 import profile from "../../assets/profilebanner.png"; // Replace with your real image if available
+import { useNavigate } from 'react-router';
 
 const HeroSection = () => {
+  const navigate = useNavigate();
   return (
     <section className="relative overflow-hidden min-h-screen flex items-center py-8 sm:py-10 lg:py-2">
     <div className="container mx-auto px-4 flex flex-col-reverse lg:flex-row items-center relative z-10">
@@ -46,9 +48,7 @@ const HeroSection = () => {
             <motion.button
               whileHover={{ scale: 1.05 }}
               className="bg-gradient-to-br from-green-400 to-teal-500 text-white px-6 sm:px-8 py-3 rounded-full hover:opacity-90 transition-opacity text-base sm:text-lg font-semibold whitespace-nowrap"
-              onClick={() => {
-                // handle view my work click
-              }}
+              onClick={() => navigate('/projects')}
             >
               View My Work
             </motion.button>

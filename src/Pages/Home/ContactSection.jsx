@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { MapPinIcon, PhoneIcon } from '@heroicons/react/24/outline';
+import Swal from 'sweetalert2';
 
 const ContactSection = () => {
   const [formData, setFormData] = useState({
@@ -21,24 +22,12 @@ const ContactSection = () => {
     setSuccess('');
     setError('');
 
-    try {
-      const res = await fetch('http://localhost:5000/contact', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData),
-      });
-
-      const data = await res.json();
-      if (data.success) {
-        setSuccess('✅ Message sent successfully!');
-        setFormData({ firstName: '', lastName: '', email: '', message: '' });
-      } else {
-        setError('❌ Failed to send message.');
-      }
-    } catch (err) {
-      console.error(err);
-      setError('❌ Something went wrong.');
-    }
+    Swal.fire({
+  title: "Message Sent",
+  icon: "success",
+  draggable: true
+});
+   
   };
 
   return (
@@ -61,25 +50,40 @@ const ContactSection = () => {
           </p>
 
           <div className="space-y-8 mb-12">
-            <div className="flex items-center space-x-4">
-              <div className="bg-gradient-to-br from-green-400 to-teal-500 p-3 rounded-full">
-                <MapPinIcon className="w-6 h-6 text-white" />
-              </div>
-              <div>
-                <p className="text-sm text-gray-400">Location</p>
-                <p className="text-lg font-semibold">Sylhet, Bangladesh</p>
-              </div>
-            </div>
-            <div className="flex items-center space-x-4">
-              <div className="bg-gradient-to-br from-green-400 to-teal-500 p-3 rounded-full">
-                <PhoneIcon className="w-6 h-6 text-white" />
-              </div>
-              <div>
-                <p className="text-sm text-gray-400">Phone /WhatsApp</p>
-                <p className="text-lg font-semibold">+880 1795 908 863</p>
-              </div>
-            </div>
-          </div>
+  <div className="flex items-center space-x-4">
+    <div className="bg-gradient-to-br from-green-400 to-teal-500 p-3 rounded-full">
+      <MapPinIcon className="w-6 h-6 text-white" />
+    </div>
+    <div>
+      <p className="text-sm text-gray-400">Location</p>
+      <p className="text-lg font-semibold">Sylhet, Bangladesh</p>
+    </div>
+  </div>
+
+  <div className="flex items-center space-x-4">
+    <div className="bg-gradient-to-br from-green-400 to-teal-500 p-3 rounded-full">
+      <PhoneIcon className="w-6 h-6 text-white" />
+    </div>
+    <div>
+      <p className="text-sm text-gray-400">Phone / WhatsApp</p>
+      <p className="text-lg font-semibold">+880 1795 908 863</p>
+    </div>
+  </div>
+
+  <div className="flex items-center space-x-4">
+    <div className="bg-gradient-to-br from-green-400 to-teal-500 p-3 rounded-full">
+      <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+        <path d="M4 4h16v16H4z" stroke="none" />
+        <path d="M4 4l8 8 8-8" />
+      </svg>
+    </div>
+    <div>
+      <p className="text-sm text-gray-400">Email</p>
+      <p className="text-lg font-semibold">ratulsaharoy.dev@gmail.com</p>
+    </div>
+  </div>
+</div>
+
 
           <div className="flex justify-start mt-8">
             <a
